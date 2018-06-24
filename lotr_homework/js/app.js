@@ -40,11 +40,28 @@ const lands = [
 // ============
 // Chapter 1
 // ============
-const makeMiddleEarth = () => {
+  const makeMiddleEarth = () => {
+
+  const $middleearth = $('<section id="middleearth"></section');
+  $('body').append($middleearth);
+
+  for(let i = 0; i <lands.length; i++){
+    const $article = $('<article/>');
+    $article.attr('id', lands[i]);
+    const $landHeader = $('<h1/>');
+    $landHeader.text(lands[i]);
+    $article.append($landHeader);
+    $middleearth.append($article);
+  }
+};
+
+makeMiddleEarth();
 
   // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
 
   console.log("Trying to make middle earth.");
+
+
 
   // 1. create a section tag with an id of middle-earth
 
@@ -60,7 +77,6 @@ const makeMiddleEarth = () => {
 
   //   3d. appends each land to the middle-earth section
 
-};
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
