@@ -210,13 +210,17 @@ makeBuddies();
 // ============
 // Chapter 6
 // ============
-const leaveTheShire = () => {
+const leaveTheShire = () => { // how to access 
+
+   // $('#Rivendell').append($makehobbits);
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
 };
+
+leaveTheShire();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -225,6 +229,7 @@ const leaveTheShire = () => {
 // Chapter 7
 // ============
 const beautifulStranger = () => {
+  
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
@@ -239,6 +244,14 @@ const beautifulStranger = () => {
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
+    const $thefellowship = $('<div id="thefellowship"></div');
+     $('#middleearth').append($thefellowship);
+     const $h1 = $('<h1/>');
+     $h1.text('The Fellowship');
+     $thefellowship.append($h1);
+
+    
+
 
   // 1. create a new div with an id 'the-fellowship'
 
@@ -249,6 +262,8 @@ const forgeTheFellowShip = () => {
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
 };
+
+forgeTheFellowShip();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
