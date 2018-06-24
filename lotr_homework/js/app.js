@@ -61,6 +61,11 @@ makeMiddleEarth();
 
   console.log("Trying to make middle earth.");
 
+   
+  
+
+
+
 
 
   // 1. create a section tag with an id of middle-earth
@@ -86,7 +91,17 @@ makeMiddleEarth();
 // ============
 const makeHobbits = () => {
 
-  console.log('Make hobbits');
+ const $makehobbits = $('<ul="makehobbits"></ul>');
+  
+
+  for(let i = 0; i < hobbits.length; i++) {
+  const $li = $('<li/>');
+  $li.attr('id', 'hobbit', hobbits[i]);
+  $li.text(hobbits[i]);
+  $makehobbits.append($li.hobbit);
+};
+
+$('#the-shire').append($makehobbits);
 
   // 1. display an unordered list of the hobbits in the shire.
 
@@ -97,6 +112,9 @@ const makeHobbits = () => {
   // hint: get 'The-Shire' by using its id
 
 };
+
+makehobbits();
+console.log('Make hobbits');
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
