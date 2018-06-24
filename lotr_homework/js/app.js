@@ -52,7 +52,7 @@ const lands = [
     $landHeader.text(lands[i]);
     $article.append($landHeader);
     $middleearth.append($article);
-  }
+  };
 };
 
 makeMiddleEarth();
@@ -92,7 +92,8 @@ makeMiddleEarth();
 const makeHobbits = () => {
 
  const $makehobbits = $('<ul="makehobbits"></ul>');
-  
+  $('#The-Shire').append($makehobbits);
+
 
   for(let i = 0; i < hobbits.length; i++) {
   const $li = $('<li/>');
@@ -101,7 +102,7 @@ const makeHobbits = () => {
   $makehobbits.append($li.hobbit);
 };
 
-$('#the-shire').append($makehobbits);
+
 
   // 1. display an unordered list of the hobbits in the shire.
 
@@ -113,8 +114,7 @@ $('#the-shire').append($makehobbits);
 
 };
 
-makehobbits();
-console.log('Make hobbits');
+makeHobbits();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -123,6 +123,8 @@ console.log('Make hobbits');
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
+
+
 
   // 1. create an empty div with an id of 'the-ring'
 
@@ -141,6 +143,17 @@ const keepItSecretKeepItSafe = () => {
 // Chapter 4
 // ============
 const makeBaddies = () => {
+  const $baddies = $('<ul>"Baddies"</ul>');
+  $('#Mordor').append($baddies);
+    for (let i = 0; i < baddies.length; i++) {
+      const $li = $('<li/>');
+      $li.attr('id', 'baddie', baddies[i]);
+      ($baddies).append($li.hobbit);
+    };
+
+
+
+
 
   // 1. display an unordered list of baddies in Mordor
 
@@ -148,6 +161,8 @@ const makeBaddies = () => {
 
   // 3. remember to append them to Mordor
 };
+
+makeBaddies();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
