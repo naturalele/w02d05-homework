@@ -92,16 +92,17 @@ makeMiddleEarth();
 const makeHobbits = () => {
 
  const $makehobbits = $('<ul="makehobbits"></ul>');
-  $('#The-Shire').append($makehobbits);
+ $makehobbits.addClass("hobbits");
+
 
 
   for(let i = 0; i < hobbits.length; i++) {
   const $li = $('<li/>');
-  $li.attr('id', 'hobbit', hobbits[i]);
+  $li.attr('id', 'hobbits', hobbits[i]);
   $li.text(hobbits[i]);
-  $makehobbits.append($li.hobbit);
+  $makehobbits.append($li);
 };
-
+ $('#The-Shire').append($makehobbits);
 
 
   // 1. display an unordered list of the hobbits in the shire.
@@ -123,6 +124,9 @@ makeHobbits();
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
+ const $theRing = $('<div id ="The-ring"></div');
+ $(".hobbits").append($theRing); // how to add to froto?
+
 
 
 
@@ -136,6 +140,8 @@ const keepItSecretKeepItSafe = () => {
 
 };
 
+keepItSecretKeepItSafe();
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
@@ -143,15 +149,17 @@ const keepItSecretKeepItSafe = () => {
 // Chapter 4
 // ============
 const makeBaddies = () => {
-  const $baddies = $('<ul>"Baddies"</ul>');
-  $('#Mordor').append($baddies);
+
+   const $baddies = $('<ul></ul>');
+   $baddies.addClass("Baddie");
+
     for (let i = 0; i < baddies.length; i++) {
-      const $li = $('<li/>');
-      $li.attr('id', 'baddie', baddies[i]);
-      ($baddies).append($li.hobbit);
-    };
-
-
+      const $li = $('<li></li>');
+      $li.attr('id', 'baddies', baddies[i]);
+      $li.text(baddies[i])
+      $baddies.append($li);
+     };
+   $("#Mordor").append($baddies);
 
 
 
@@ -171,6 +179,20 @@ makeBaddies();
 // Chapter 5
 // ============
 const makeBuddies = () => {
+  const $aside = $('<aside></aside>');
+  $('#middleearth').append($aside);
+
+  const $buddies = $('<ul></ul>');
+
+  for (let i = 0; i < buddies.length; i++) {
+    const $li = $('<li></li');
+    $li.attr('id', 'buddies', buddies[i]);
+    $li.text(buddies[i])
+    $buddies.append($li);
+    $buddies.addClass("buddy");
+  };
+
+  $aside.append($buddies);
 
   // 1. create an aside tag and append it to middle-earth below mordor
 
@@ -179,6 +201,8 @@ const makeBuddies = () => {
   // 3. give each of the buddies a class of "buddy"
 
 };
+
+makeBuddies();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
