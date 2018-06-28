@@ -91,14 +91,11 @@ makeMiddleEarth();
 // ============
 const makeHobbits = () => {
 
- const $makehobbits = $('<ul="makehobbits"></ul>');
- $makehobbits.addClass("hobbits");
-
-
-
+ const $makehobbits = $('<ul class="makehobbits"></ul>');
+ 
   for(let i = 0; i < hobbits.length; i++) {
   const $li = $('<li/>');
-  $li.attr('id', 'hobbits', hobbits[i]);
+  $li.attr('class', 'hobbit');
   $li.text(hobbits[i]);
   $makehobbits.append($li);
 };
@@ -124,8 +121,9 @@ makeHobbits();
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
- const $theRing = $('<div id ="The-ring"></div');
- $(".hobbits").append($theRing); // how to add to froto?
+  $("li:contains('Frodo')").append("<div id='the-ring'></div>") //quick way
+ // const $theRing = $('<div id ="The-ring"></div');
+ // $("li:contains('Frodo')").append($theRing); 
 
 
 
@@ -189,8 +187,9 @@ const makeBuddies = () => {
     $li.attr('id', 'buddies', buddies[i]);
     $li.text(buddies[i])
     $buddies.append($li);
-    $buddies.addClass("buddy");
-  };
+
+    //$buddiesList.append(`<li class="buddy">${buddies[i]})
+   };
 
   $aside.append($buddies);
 
@@ -210,9 +209,10 @@ makeBuddies();
 // ============
 // Chapter 6
 // ============
-const leaveTheShire = () => { // how to access 
+const leaveTheShire = () => {  
 
-   // $('#Rivendell').append($makehobbits);
+  
+   $(".hobbit").appendTo("#Rivendell");
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
@@ -229,7 +229,8 @@ leaveTheShire();
 // Chapter 7
 // ============
 const beautifulStranger = () => {
-  
+
+   $('li:contains("Strider")').text("Aragon");
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
@@ -249,6 +250,12 @@ const forgeTheFellowShip = () => {
      const $h1 = $('<h1/>');
      $h1.text('The Fellowship');
      $thefellowship.append($h1);
+
+
+
+  $(".makehobbits").appendTo("#the-fellowship");
+  $(".buddies").appendTo("#the-fellowship");
+
 
     
 
@@ -272,6 +279,7 @@ forgeTheFellowShip();
 // Chapter 9
 // ============
 const theBalrog = () => {
+  $('li:contains("Gandalf")').text("Gandalf the White").addClass("the-white")
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
@@ -281,6 +289,8 @@ const theBalrog = () => {
 
 };
 
+theBalrog();
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
 
@@ -289,6 +299,13 @@ const theBalrog = () => {
 // ============
 const hornOfGondor = () => {
 
+  $("#10").click(function() {
+  alert("horn of gondor has been blown");
+
+  $("li").eq(12).css("text-decoration", "line-through");
+
+  $("li").eq(6).remove();
+  });
   // 1. create a pop-up alert that the horn of gondor has been blown
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
@@ -296,6 +313,7 @@ const hornOfGondor = () => {
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
 };
+hornOfGondor();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
@@ -369,5 +387,6 @@ $(() => {
   $('#11').on('click', itsDangerousToGoAlone);
   $('#12').on('click', weWantsIt);
   $('#13').on('click', thereAndBackAgain);
+  // $('button').each(function()
 
 });
