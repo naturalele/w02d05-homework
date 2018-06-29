@@ -98,9 +98,9 @@ const makeHobbits = () => {
   $li.attr('class', 'hobbit');
   $li.text(hobbits[i]);
   $makehobbits.append($li);
+  };
+  $('#The-Shire').append($makehobbits);
 };
- $('#The-Shire').append($makehobbits);
-
 
   // 1. display an unordered list of the hobbits in the shire.
 
@@ -110,7 +110,7 @@ const makeHobbits = () => {
 
   // hint: get 'The-Shire' by using its id
 
-};
+
 
 makeHobbits();
 
@@ -121,12 +121,8 @@ makeHobbits();
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
-  $("li:contains('Frodo')").append("<div id='the-ring'></div>") //quick way
- // const $theRing = $('<div id ="The-ring"></div');
- // $("li:contains('Frodo')").append($theRing); 
-
-
-
+  $("li:contains('Frodo')").append("<div id='the-ring'></div>") 
+};
 
   // 1. create an empty div with an id of 'the-ring'
 
@@ -136,7 +132,7 @@ const keepItSecretKeepItSafe = () => {
 
   // when you think you have given Frodo the ring, check in your Elements tab
 
-};
+
 
 keepItSecretKeepItSafe();
 
@@ -158,15 +154,14 @@ const makeBaddies = () => {
       $baddies.append($li);
      };
    $("#Mordor").append($baddies);
-
-
+  };
 
   // 1. display an unordered list of baddies in Mordor
 
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
-};
+
 
 makeBaddies();
 
@@ -187,9 +182,7 @@ const makeBuddies = () => {
     $li.attr('id', 'buddies', buddies[i]);
     $li.text(buddies[i])
     $buddies.append($li);
-
-    //$buddiesList.append(`<li class="buddy">${buddies[i]})
-   };
+  };
 
   $aside.append($buddies);
 
@@ -213,12 +206,12 @@ const leaveTheShire = () => {
 
   
    $(".hobbit").appendTo("#Rivendell");
-
+};
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
-};
+
 
 leaveTheShire();
 
@@ -231,12 +224,12 @@ leaveTheShire();
 const beautifulStranger = () => {
 
    $('li:contains("Strider")').text("Aragon");
-
+};
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
-};
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
@@ -251,14 +244,9 @@ const forgeTheFellowShip = () => {
      $h1.text('The Fellowship');
      $thefellowship.append($h1);
 
-
-
   $(".makehobbits").appendTo("#the-fellowship");
   $(".buddies").appendTo("#the-fellowship");
-
-
-    
-
+};
 
   // 1. create a new div with an id 'the-fellowship'
 
@@ -268,7 +256,6 @@ const forgeTheFellowShip = () => {
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
-};
 
 forgeTheFellowShip();
 
@@ -280,14 +267,14 @@ forgeTheFellowShip();
 // ============
 const theBalrog = () => {
   $('li:contains("Gandalf")').text("Gandalf the White").addClass("the-white")
-
+};
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
   // 2. add a class "the-white" to this element
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
-};
+
 
 theBalrog();
 
