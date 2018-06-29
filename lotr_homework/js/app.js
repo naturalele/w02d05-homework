@@ -359,14 +359,19 @@ weWantsIt();
 // Chapter 13
 // ============
 const thereAndBackAgain = () => {
-
+   $("#gollum").remove();
+   $(".Baddie").remove();
+   $(".hobbit").remove().appendTo("#The-Shire");
+};
   // 1. remove Gollum and the Ring from the DOM
 
   // 2. remove all the baddies from the DOM
 
   // 3. Move all the hobbits back to the shire
 
-};
+
+
+thereAndBackAgain();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
